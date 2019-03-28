@@ -1,0 +1,195 @@
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+    /*font size*/
+
+    .font-sm-6 {
+        font-size: 6px;
+    }
+    .font-sm-7 {
+        font-size: 7px;
+    }
+    .font-sm-8 {
+        font-size: 8px;
+    }
+    .font-sm-9 {
+        font-size: 9px;
+    }
+    .font-sm-10 {
+        font-size: 10px;
+    }
+    .font-sm-11 {
+        font-size: 11px;
+    }
+    .font-sm-12 {
+        font-size: 12px;
+    }
+    .font-sm-13 {
+        font-size: 13px;
+    }
+    .font-sm-14 {
+        font-size: 14px;
+    }
+    .font-sm-16 {
+        font-size: 16px;
+    }
+    .font-sm-18 {
+        font-size: 18px;
+    }
+    .font-sm-20 {
+        font-size: 20px;
+    }
+    .font-sm-22 {
+        font-size: 22px;
+    }
+    .font-sm-24 {
+        font-size: 24px;
+    }
+    .font-sm-26 {
+        font-size: 26px;
+    }
+    .font-sm-28 {
+        font-size: 28px;
+    }
+    .font-sm-30 {
+        font-size: 30px;
+    }
+    .font-sm-32 {
+        font-size: 32px;
+    }
+    .font-sm-36 {
+        font-size: 36px;
+    }
+    .font-sm-38 {
+        font-size: 38px;
+    }
+    .font-sm-40 {
+        font-size: 40px;
+    }
+    .font-sm-44 {
+        font-size: 44px;
+    }
+    .font-sm-46 {
+        font-size: 46px;
+    }
+    .font-sm-48 {
+        font-size: 48px;
+    }
+    .font-sm-50 {
+        font-size: 50px;
+    }
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 834px)
+and (max-device-width: 1112px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+and (min-device-width: 834px)
+and (max-device-width: 834px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+and (min-device-width: 1112px)
+and (max-device-width: 1112px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1366px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+and (min-device-width: 1366px)
+and (max-device-width: 1366px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
