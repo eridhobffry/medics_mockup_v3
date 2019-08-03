@@ -132,25 +132,75 @@ and (-webkit-min-device-pixel-ratio: 2) {
         text-align: center;
     }
 
-    .pad-10-xs {
+    .pad-left-10-xs {
         padding-left: 10px;
     }
 
-    .pad-15-xs {
+    .pad-left-15-xs {
         padding-left: 15px;
     }
 
-    .pad-20-xs {
+    .pad-left-20-xs {
         padding-left: 20px;
     }
 
-    .pad-25-xs {
+    .pad-left-25-xs {
         padding-left: 25px;
     }
 
-    .pad-30-xs {
+    .pad-left-30-xs {
         padding-left: 30px;
     }
+
+    .section-xxs-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .section-xxs-20 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .section-xxs-34 {
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+    .section-xxs-41 {
+        padding-top: 41px;
+        padding-bottom: 41px;
+    }
+    .section-xxs-50 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .section-xxs-66 {
+        padding-top: 66px;
+        padding-bottom: 66px;
+    }
+    .section-xxs-85 {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+    .section-xxs-98 {
+        padding-top: 98px;
+        padding-bottom: 98px;
+    }
+    .section-xxs-110 {
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+    .section-xxs-124 {
+        padding-top: 124px;
+        padding-bottom: 124px;
+    }
+    .section-xxs-254 {
+        padding-top: 254px;
+        padding-bottom: 254px;
+    }
+    .section-xxs-350 {
+        padding-top: 350px;
+        padding-bottom: 350px;
+    }
+
 
     .section-xxs-bottom-0 {
         padding-bottom: 0;

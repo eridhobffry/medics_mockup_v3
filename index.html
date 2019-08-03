@@ -82,7 +82,7 @@
                                   <span class="text-rotator" style="color: black" data-text-class="text-mantis" data-enable="1200" data-words="Ärzte , Krankenpfleger , Altenpfleger , Hebamme , MTRA, OTA , Psychologen , Physiotherapeuten" data-rotate-interval="1000" data-rotate-animation="fadeInUp, fadeOutUp"><span class="rotate-area"></span></span>
                                 </h1>
 
-                                <div class="offset-top-35 group pad-15-xs">
+                                <div class="offset-top-35 group pad-left-15-xs">
                                   <button id="button-arbeitgeber" class="btn btn-primary btn-icon btn-icon-left btn-sm" href="">
                                     <span class="icon mdi mdi-hospital-building"></span>Arbeitgeber
                                   </button>
@@ -188,7 +188,7 @@
 
                 </h6>
               </div>
-              <div class="cell-lg-9 offset-xs-top-98 offset-lg-top-20">
+              <div class="cell-lg-9 offset-xs-top-98 offset-lg-top-20 section-xxs-85">
                 <div class="range">
                   <div class="cell-lg-4">
                     <div class="box-content">
@@ -511,7 +511,7 @@
             <!--STEP 1 BEWERBER-->
             <div class="range range-xs-center range-sm-left">
               <div class="cell-xs-10 cell-sm-6 section-image-aside section-image-aside-right text-left">
-                <div class="section-image-aside-img veil reveal-sm-block" style="background-image: url(images/sample/sampleTmeline1.jpg);"></div>
+                <div class="section-image-aside-img veil reveal-sm-block" style="background-image: url(images/sample/sample_timeline_bewerber.jpg);"></div>
                 <div class="section-image-aside-body section-sm-66 inset-sm-right-30">
                   <div>
                     <h3 class="text-picton-blue text-underline">01</h3>
@@ -555,7 +555,7 @@
             <!--STEP 2 BEWERBER-->
             <div class="range range-xs-center range-sm-right offset-top-0">
               <div class="cell-xs-10 cell-sm-6 section-image-aside section-image-aside-left text-left">
-                <div class="section-image-aside-img veil reveal-sm-block" style="background-image: url(images/sample/sampleTimeline2.jpg);"></div>
+                <div class="section-image-aside-img veil reveal-sm-block" style="background-image: url(images/sample/sample_timeline_bewerber-2.jpg);"></div>
                 <div class="section-image-aside-body offset-top-41 offset-sm-top-0 section-sm-66 inset-sm-left-50">
                   <div>
                     <h3 class="text-picton-blue text-underline">02</h3>
@@ -595,7 +595,7 @@
             <!--STEP 3 BEWERBER-->
             <div class="range range-xs-center range-sm-left offset-top-0">
               <div class="cell-xs-10 cell-sm-6 section-image-aside section-image-aside-right text-left">
-                <div class="section-image-aside-img veil reveal-sm-block" style="background-image: url(images/sample/sampleTimeline3.jpg);"></div>
+                <div class="section-image-aside-img veil reveal-sm-block" style="background-image: url(images/sample/sample_timeline_bewerber-4.jpg);"></div>
                 <div class="section-image-aside-body offset-top-41 offset-sm-top-0 section-sm-66 inset-sm-right-30">
                   <div>
                     <h3 class="text-picton-blue text-underline">03</h3>
@@ -645,6 +645,12 @@
               </a>
             </div>
           </div>
+        </div>
+
+        <div id="jobList">
+          <ul>
+            <li v-for="job in jobs">{{ job.location }}</li>
+          </ul>
         </div>
 
       </main>
@@ -724,6 +730,7 @@
       </div>
     </div>
     <!-- JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/medics-custom.js"></script>
@@ -731,5 +738,7 @@
     <script src="js/rd-facebook-v1.0.2.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
   </body>
 </html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="wide wow-animation smoothscroll scrollTo" lang="de" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Site Title-->
+    <title>Hello-medics v_3</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="Hello Medic | ">
+    <meta name="date" content="Feb 22">
+    <link rel="icon" href="images/gg-favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7CLato:300,300italic,400,700,900%7CYesteryear">
+    <link rel="stylesheet" href="css/style.css">
+    <!--css extensions-->
+    <link rel="stylesheet" href="css/medic-custom-desktop.css">
+    <link rel="stylesheet" href="css/medic-custom-mobile.css">
+    <link rel="stylesheet" href="css/medic-custom-tablet.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="page text-center">
+    <!-- Page Head-->
+    <header class="page-head slider-menu-position">
+        <!-- RD Navbar Transparent-->
+        <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-default" data-auto-height="false" data-md-auto-height="false" data-md-device-layout="rd-navbar-fixed" data-anchor-offset="20" data-lg-device-layout="rd-navbar-static" data-lg-auto-height="false" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-stick-up="true">
+                <div class="rd-navbar-inner">
+                    <!-- RD Navbar Panel-->
+                    <div class="rd-navbar-panel">
+                        <!-- RD Navbar Toggle-->
+                        <button id="toggle-custom-rln" class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap"><span></span></button>
+                        <!-- Navbar Brand-->
+                        <div id="brand-mobile" class="rd-navbar-brand"><a href="index.html"><img class="img-size-brand-1" src="images/logo_guel.png" alt="Logo Hello-Medics"></a></div>
+                    </div>
+                    <div class="rd-navbar-menu-wrap">
+                        <div class="rd-navbar-nav-wrap">
+                            <div class="rd-navbar-mobile-scroll">
+                                <!-- Navbar Brand Mobile-->
+                                <div class="rd-navbar-mobile-brand"><a href="index.html"><img class="img-size-brand-1" src="images/logo_guel.png" alt=""></a></div>
+                                <!-- RD Navbar Nav-->
+                                <ul class="rd-navbar-nav">
+                                    <li class="active"><a href="#home"></a></li>
+                                    <li><a id="tel-head" class="fa fa-phone font-accent text-center-xs" href="tel:+4968168635374"> +49 681 68 63 53 74 </a></li>
+                                    <li><a id="anmelden"  style="" class="text-center-xs" href="login.html"> Anmelden</a></li>
+                                    <li><a id="price-show" style="" class="" href="pricing.html"> Anzeige Schalten</a></li>
+                                    <li><a href="#faq"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Contents-->
+    <main id="app" class="jobs-list-content page-content section-lg-110">
+
+<!--        search filter-->
+        <div class="text-left shell" style="padding: 10px 0">
+            <div class="range">
+                <div class="cell-md-3">
+                    <div class="form-group">
+                        <label class="" for="qualification-hidden">Beruf</label>
+                        <div class="hd-searchable-select-single" style="background: white">
+                            <v-select v-model="selected" id="job-hidden" label="name" class="" :options="jobs">
+                            </v-select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="row" v-if="selected.value === 'A' || selected.value === 'T'">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="" for="qualification-hidden">Funktion</label>
+                        <div class="hd-searchable-select-single" style="background: white">
+                            <select id="qualification-hidden" name="sectorQualificationIds" class="myDropdown dropdown-content form-control select-filter" onchange="funktionDropdownSelected(this)">
+                                <option class="hd-searchable-select-single-option qualification-option" value="">Bitte auswählen</option>
+                                    <option class="hd-searchable-select-single-option qualification-option">${funktion.name}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="" for="specialization-hidden">Fachgebiet</label>
+                        <div class="hd-searchable-select-single" style="background: white">
+                            <select id="specialization-hidden" name="specializationIds" class="myDropdown dropdown-content form-control select-filter" onchange="fachgebietDropdownSelected(this)">
+                                <option class="hd-searchable-select-single-option" value="">Bitte auswählen</option>
+                                    <option class="hd-searchable-select-single-option">${gebiet.name}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div id="bundesland-dropdown-form-container-search" class="form-group">
+                        <label class="" for="bundesland-hidden">Bundesland</label>
+                        <div class="hd-searchable-select-single" style="background: white">
+                            <select id="bundesland-hidden" name="bundeslandIds" class="myDropdown dropdown-content form-control select-filter" onchange="areaDropdownSelected(this)">
+                                <option class="hd-searchable-select-single-option" value="">Bitte auswählen</option>
+                                    <option class="hd-searchable-select-single-option">${bundesland.name}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-wrap stick-to-bottom distance-from-top-20 text-center">
+                <button style="" class="btn btn-primary btn-sm my-submit-btn arbeitgeber-btn-original style_button-seo" type="submit" onclick="filterOutEmptyParams(this)">Suchen</button>
+            </div>
+        </div>
+
+<!--        section jobs-->
+        <div class="section-top-66 section-bottom-34 shell">
+            <div class="range container style-card-job-list">
+                <!--            Job List-->
+
+            </div>
+        </div>
+
+        <div class="column shell">
+            <joblists-component v-for="joblist in joblists" :joblist="joblist"/>
+        </div>
+
+
+    </main>
+    <!-- Page Footer-->
+    <!-- Custom footer-->
+    <footer class="footer__med section-relative section-34 page-footer bg-white context-dark post-timeline">
+        <div class="shell">
+            <div class="range range-sm-center text-lg-left">
+                <div class="cell-sm-12">
+                    <div class="range range-xs-center">
+                        <div class="cell-xs-12 cell-md-8 cell-md-push-2 text-md-right">
+                            <div>
+                                <ul class="list-inline s-p-25 list-inline-dashed__med p text-darker">
+                                    <li><a href="#">Impressum</a></li>
+                                    <li><a href="#">AGB</a></li>
+                                    <li><a href="#">Datenschutz</a></li>
+                                </ul>
+                            </div>
+                            <!--<ul class="list-inline list-inline-white offset-top-10 text-darker">-->
+                            <!--<li><a class="fa fa-facebook" href="#"></a></li>-->
+                            <!--<li><a class="fa fa-twitter" href="#"></a></li>-->
+                            <!--<li><a class="fa fa-google-plus" href="#"></a></li>-->
+                            <!--<li><a class="fa fa-pinterest" href="#"></a></li>-->
+                            <!--<li><a class="fa fa-vimeo" href="#"></a></li>-->
+                            <!--<li><a class="fa fa-youtube" href="#"></a></li>-->
+                            <!--<li><a class="fa fa-linkedin" href="#"></a></li>-->
+                            <!--<li><a class="fa fa-github" href="#"></a></li>-->
+                            <!--<li><a class="fa fa-yahoo" href="#"></a></li>-->
+                            <!--</ul>-->
+                        </div>
+                        <div class="cell-xs-12 cell-md-4 cell-md-push-1 offset-top-34 offset-md-top-0">
+                            <!-- Footer brand-->
+                            <!--<div class="footer-brand"><a href="index.html"><img style='margin-top: -5px;margin-left: -15px;' width='138' height='31' src='images/intense/logo-light.png' alt=''/></a></div>-->
+                            <p class="small text-darker offset-top-4">&copy; <span class="copyright-year"></span> hello-medic.de - <a href="https://www.guel.gmbh" target="_blank">Gül GmbH</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- Global RD Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
+<!-- PhotoSwipe Gallery-->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript-->
+<script>
+</script>
+
+
+<!-- include VueJS first -->
+<script src="https://unpkg.com/vue@latest"></script>
+
+<!-- use the latest vue-select release -->
+<script src="https://unpkg.com/vue-select@latest"></script>
+<link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
+
+<!-- or point to a specific vue-select release -->
+<script src="https://unpkg.com/vue-select@3.0.0"></script>
+<link rel="stylesheet" href="https://unpkg.com/vue-select@3.0.0/dist/vue-select.css">
+
+<script src="js/core.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/medics-custom.js"></script>
+<script src="js/pointer-events.min.js"></script>
+<script src="js/rd-facebook-v1.0.2.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
